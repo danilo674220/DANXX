@@ -18,7 +18,6 @@ document.addEventListener("DOMContentLoaded", function () {
         form.addEventListener("submit", function (e) {
             e.preventDefault();
             
-            // Mostrar mensaje de confirmación
             document.getElementById("mensajeConfirmacion").style.display = "block";
 
             // Limpiar el formulario
