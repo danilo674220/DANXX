@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function () {
             
             document.getElementById("mensajeConfirmacion").style.display = "block";
 
-            // Limpiar el formulario
+
             form.reset();
         });
     }
