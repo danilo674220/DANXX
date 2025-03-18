@@ -1,4 +1,4 @@
-/* Reset */
+
 * {
     margin: 0;
     padding: 0;
@@ -95,13 +95,13 @@ section {
     text-align: center;
     transition: background 0.3s, transform 0.2s;
     margin: 0 auto;
-    border-radius: 5px; /* Esquinas ligeramente redondeadas */
+    border-radius: 5px; 
 }
 
 .btn-cuadro:hover {
-    background: #d8eb04; /* Cambio de color al pasar el mouse */
+    background: #d8eb04; 
     color: black;
-    transform: scale(1.1); /* Efecto de agrandado */
+    transform: scale(1.1); 
 }
 
 
