@@ -87,7 +87,7 @@ section {
     border: none;
     cursor: pointer;
     text-transform: uppercase;
-    width: 150px; /* Ajusta el tamaño del cuadro */
+    width: 150px; 
     height: 50px;
     display: flex;
     align-items: center;
