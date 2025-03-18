@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-    // Agregar desplazamiento suave al hacer clic en los enlaces del menú
+
     document.querySelectorAll('nav ul li a').forEach(enlace => {
         enlace.addEventListener('click', function (e) {
             if (this.getAttribute('href').startsWith('#')) {
@@ -12,7 +12,6 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 
-    // Manejo del formulario de contacto
     const form = document.getElementById("contactForm");
 
     if (form) {
