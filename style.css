@@ -1,0 +1,328 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #1c1c1c;
+    color: white;
+    text-align: center;
+}
+
+/* Estilos del header */
+header {
+    background: #333;
+    padding: 15px;
+}
+
+/* Estilos para el menú de navegación */
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+    gap: 20px;
+}
+
+nav ul li {
+    position: relative;
+    background: rgba(255, 255, 255, 0.1); /* Fondo transparente */
+    padding: 10px 20px;
+    border-radius: 10px;
+    transition: transform 0.3s ease, background 0.3s ease;
+    overflow: hidden;
+}
+
+nav ul li::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 87, 51, 0.7); /* Color al pasar el mouse */
+    transition: left 0.3s ease;
+    z-index: -1;
+    border-radius: 10px;
+}
+
+nav ul li:hover::before {
+    left: 0;
+}
+
+nav ul li:hover {
+    transform: scale(1.1);
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    position: relative;
+    z-index: 2;
+}
+
+/* Secciones */
+section {
+    padding: 50px 20px;
+}
+
+/* Sección de Inicio */
+#inicio {
+    background: url('https://png.pngtree.com/background/20230528/original/pngtree-black-gym-with-heavy-weights-picture-image_2773823.jpg') no-repeat center center/cover;
+    padding: 100px 20px;
+}
+
+/* INSCRIBETE YA*/
+.btn-cuadro {
+    background: #ff5733;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 15px 20px;
+    border: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    width: 150px; /* Ajusta el tamaño del cuadro */
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transition: background 0.3s, transform 0.2s;
+    margin: 0 auto;
+    border-radius: 5px; /* Esquinas ligeramente redondeadas */
+}
+
+.btn-cuadro:hover {
+    background: #d8eb04; /* Cambio de color al pasar el mouse */
+    color: black;
+    transform: scale(1.1); /* Efecto de agrandado */
+}
+
+
+
+/* Estilos para Sobre Nosotros dentro de Inicio */
+.contenedor-nosotros {
+    max-width: 900px;
+    margin: 40px auto 0;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
+}
+
+.nosotros-texto {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.nosotros-texto div {
+    background: #ff5733;
+    padding: 20px;
+    border-radius: 10px;
+    flex: 1;
+    min-width: 300px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
+}
+
+.nosotros-texto h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.nosotros-texto p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+/* Sección de Productos */
+#productos {
+    padding: 50px 20px;
+    background: #333;
+}
+
+.producto {
+    background: #222;
+    padding: 15px;
+    margin: 15px auto;
+    width: 80%;
+    border-radius: 8px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.producto h3 {
+    color: #ff5733;
+}
+
+.producto p {
+    color: white;
+}
+
+/* Sección de Contacto */
+#formulario-contacto {
+    padding: 50px 20px;
+    background: #333;
+    text-align: center;
+}
+
+form {
+    background: #222;
+    padding: 20px;
+    width: 80%;
+    max-width: 400px;
+    margin: 0 auto;
+    border-radius: 8px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+label {
+    display: block;
+    color: white;
+    margin-top: 10px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: none;
+}
+
+button {
+    background: #ff5733;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+    width: 100%;
+    border-radius: 5px;
+}
+
+/* Footer */
+footer {
+    background: #222;
+    padding: 15px;
+    margin-top: 20px;
+}
+/* Contenedor de productos en una fila */
+.productos-destacados {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
+    margin-top: 20px;
+    flex-wrap: nowrap; /* Evita que los productos salten a otra línea */
+    overflow-x: auto; /* Permite desplazamiento si no hay suficiente espacio */
+}
+
+/* Estilos de cada producto */
+.producto {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 220px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    flex-shrink: 0; /* Evita que los productos se reduzcan si no caben */
+}
+
+.producto img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.producto h3 {
+    color: white;
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.producto p {
+    color: #ffcc00;
+    font-size: 16px;
+}
+
+.producto del {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 14px;
+}
+
+/* Botón de compra */
+.producto button {
+    background: #ff5733;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.producto button:hover {
+    background: #c70039;
+}
+
+/* Efecto hover */
+.producto:hover {
+    transform: scale(1.07);
+    box-shadow: 0px 0px 15px rgba(255, 87, 51, 0.9);
+}
+/* Sección de Servicios */
+#servicios {
+    padding: 50px 20px;
+    text-align: center;
+    background: #222;
+}
+
+/* Contenedor de los cuadros de servicios */
+.servicios-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* Cada cuadro de servicio */
+.servicio {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    width: 250px;
+    text-align: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Títulos dentro de cada cuadro */
+.servicio h3 {
+    color: #ffcc00;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+/* Texto dentro de cada cuadro */
+.servicio p {
+    color: white;
+    font-size: 16px;
+}
+
+/* Efecto hover */
+.servicio:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 0px 15px rgba(255, 204, 0, 0.9);
+}

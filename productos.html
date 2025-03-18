@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos - FitZone Gym</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 20px;
+        }
+        header, footer {
+            width: 100%;
+            text-align: center;
+            padding: 10px;
+            background: #333;
+            color: white;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        nav ul li {
+            display: inline;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+        .contenedor {
+            display: flex;
+            width: 100%;
+        }
+        .categorias {
+            width: 25%;
+            padding: 20px;
+            background: #222222;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            border-right: 2px solid #ccc;
+            position: relative;
+        }
+        .categorias h3 {
+            text-align: center;
+            width: 100%;
+            background: #444;
+            color: white;
+            padding: 15px;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+        .categorias ul {
+            list-style: none;
+            padding: 0;
+            width: 100%;
+            display: none;
+            transition: all 0.3s ease;
+        }
+        .categorias:hover ul, .categorias.active ul {
+            display: block;
+        }
+        .categorias ul li {
+            background: #666;
+            color: white;
+            padding: 15px;
+            margin: 10px 0;
+            text-align: center;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .categorias ul li:hover {
+            background: #28a745;
+        }
+        .productos {
+            width: 75%;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            padding: 20px;
+            justify-content: center;
+            background: url('https://cdn.pixabay.com/photo/2016/01/08/01/53/gymer-1126999_960_720.jpg') no-repeat center center/cover;
+        }
+        .producto {
+            width: calc(25% - 20px);
+            padding: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            text-align: center;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            backdrop-filter: blur(10px);
+        }
+        .producto img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        .producto p {
+            margin: 30px 0;
+            font-weight: bold;
+            color: rgb(255, 255, 0);
+        }
+        .producto button {
+            background: #28a745;
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            width: 100%;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+        .producto button:hover {
+            background: #218838;
+        }
+    </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const categorias = document.querySelector(".categorias h3");
+            categorias.addEventListener("click", function() {
+                document.querySelector(".categorias").classList.toggle("active");
+            });
+        });
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Productos de FitZone</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="index.html#servicios">Servicios</a></li>
+                <li><a href="contacto.html">Contacto</a></li> 
+                <li><a href="productos.html">Productos</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="contenedor">
+        <div class="categorias">
+            <h3>Categorías</h3>
+            <ul>
+                <li>Máquinas</li>
+                <li>Suplementos</li>
+                <li>Accesorios de Gimnasio</li>
+            </ul>
+        </div>
+        <div class="productos">
+            <div class="producto">
+                <img src="https://expertfightingtips.com/wp-content/uploads/2017/05/img_8072.png" alt="Proteína en Polvo">
+                <p>Proteína en Polvo - $30</p>
+                <button>Comprar</button>
+            </div>
+            <div class="producto">
+                <img src="https://expertfightingtips.com/wp-content/uploads/2017/05/img_8072.png" alt="Pesas y Mancuernas">
+                <p>Pesas y Mancuernas - $50</p>
+                <button>Comprar</button>
+            </div>
+            <div class="producto">
+                <img src="https://expertfightingtips.com/wp-content/uploads/2017/05/img_8072.png" alt="Bicicleta de Spinning">
+                <p>Bicicleta de Spinning - $300</p>
+                <button>Comprar</button>
+            </div>
+            <div class="producto">
+                <img src="https://expertfightingtips.com/wp-content/uploads/2017/05/img_8072.png" alt="Cinta de Correr">
+                <p>Cinta de Correr - $500</p>
+                <button>Comprar</button>
+            </div>
+            <div class="producto">
+                <img src="https://expertfightingtips.com/wp-content/uploads/2017/05/img_8072.png" alt="Guantes de Gimnasio">
+                <p>Guantes de Gimnasio - $15</p>
+                <button>Comprar</button>
+            </div>
+            <div class="producto">
+                <img src="https://expertfightingtips.com/wp-content/uploads/2017/05/img_8072.png" alt="Banco de Pesas">
+                <p>Banco de Pesas - $100</p>
+                <button>Comprar</button>
+            </div>
+            <div class="producto">
+                <img src="https://expertfightingtips.com/wp-content/uploads/2017/05/img_8072.png" alt="Cuerda para Saltar">
+                <p>Cuerda para Saltar - $10</p>
+                <button>Comprar</button>
+            </div>
+            <div class="producto">
+                <img src="https://expertfightingtips.com/wp-content/uploads/2017/05/img_8072.png" alt="Cuerda para Saltar">
+                <p>Cuerda para Saltar - $10</p>
+                <button>Comprar</button>
+            </div>
+            <div class="producto">
+                <img src="https://expertfightingtips.com/wp-content/uploads/2017/05/img_8072.png" alt="Cuerda para Saltar">
+                <p>Cuerda para Saltar - $10</p>
+                <button>Comprar</button>
+            </div>
+            <div class="producto">
+                <img src="https://expertfightingtips.com/wp-content/uploads/2017/05/img_8072.png" alt="Cuerda para Saltar">
+                <p>Cuerda para Saltar - $10</p>
+                <button>Comprar</button>
+            </div>
+            <div class="producto">
+                <img src="https://expertfightingtips.com/wp-content/uploads/2017/05/img_8072.png" alt="Cuerda para Saltar">
+                <p>Cuerda para Saltar - $10</p>
+                <button>Comprar</button>
+            </div>
+            <div class="producto">
+                <img src="https://expertfightingtips.com/wp-content/uploads/2017/05/img_8072.png" alt="Cuerda para Saltar">
+                <p>Cuerda para Saltar - $10</p>
+                <button>Comprar</button>
+    
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2025 FitZone Gym - Todos los derechos reservados</p>
+    </footer>
+</body>
+</html>
