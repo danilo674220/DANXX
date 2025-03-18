@@ -12,13 +12,13 @@ body {
     text-align: center;
 }
 
-/* Estilos del header */
+
 header {
     background: #333;
     padding: 15px;
 }
 
-/* Estilos para el menú de navegación */
+
 nav ul {
     list-style: none;
     display: flex;
